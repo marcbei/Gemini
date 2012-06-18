@@ -1,4 +1,6 @@
 Gemini::Application.routes.draw do
+  get "pages/home"
+
   resources :users
   root :to => 'users#index'
 
