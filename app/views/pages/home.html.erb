@@ -1,2 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<% provide(:title, 'Home')%>
+<h1>Gemini</h1>
+<p>
+  This is the home page for the Gemini project. <br/><br/>
+  Click this <%= link_to "link", users_path %> to view and modify users. <br/>	
+</p>

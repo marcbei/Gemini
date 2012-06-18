@@ -1,14 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Gemini</title>
+  <title>Gemini | <%= yield(:title) %></title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
+  <!-- todo: temp css -->
+	<style type="text/css">
+		#navlist li
+		{
+		display: inline;
+		list-style-type: none;
+		padding-right: 20px;
+		}
+	</style>
 </head>
 <body>
 
-<%= yield %>
+	<%= yield %>
+<ul id="navlist">
+<li><%= link_to "Home", root_path %></li>
+<li><%= link_to "About Us", about_path %></li>
+</ul>
 
 </body>
 </html>
