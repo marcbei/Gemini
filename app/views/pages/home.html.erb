@@ -1,12 +1,21 @@
 <% provide(:title, 'Home')%>
 <div class="center hero-unit">
 <h1>Welcome to the Gemini Project!</h1>
+</div>
 <h2>
 <br/>Gemini is a new service for lawyers in Washington State. Sign-up now to receive updates.<br/><br/>
 </h2>
-<form>
-Email Address: <input type="text" name="emailaddress" style="width:260px; "/><br />
-WA State Bar Number: <input type="password" name="barnumber" /><br/>
-<input type="submit" value="Submit" />
-</form>
+<div class="row">
+  <div class="span6 offset3">
+    <%= form_for(@user) do |f| %>
+	<%= render 'shared/error_messages' %>
+      <%= f.label :email %>
+      <%= f.text_field :email %>
+
+      <%= f.label :barnumber %>
+      <%= f.text_field :barnumber %>
+
+      <%= f.submit "Submit", :class=> "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
 </div>

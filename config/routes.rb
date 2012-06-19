@@ -1,8 +1,10 @@
 Gemini::Application.routes.draw do
+  resources :users
+
   match '/users' => 'users#index'
   match '/about' => 'pages#about'
 
-  resources :users
+
   root :to => 'pages#home'
 
   # The priority is based upon order of creation:
