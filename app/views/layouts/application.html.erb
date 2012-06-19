@@ -2,26 +2,16 @@
 <html>
 <head>
   <title>Gemini | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "application", :media=> "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <!-- todo: temp css -->
-	<style type="text/css">
-		#navlist li
-		{
-		display: inline;
-		list-style-type: none;
-		padding-right: 20px;
-		}
-	</style>
+  <%= render 'layouts/shim' %> 
 </head>
 <body>
-
-	<%= yield %>
-<ul id="navlist">
-<li><%= link_to "Home", root_path %></li>
-<li><%= link_to "About Us", about_path %></li>
-</ul>
-
-</body>
+	 <%= render 'layouts/header' %>
+    <div class="container">
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+  </body>
 </html>

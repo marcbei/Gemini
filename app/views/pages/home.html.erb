@@ -1,6 +1,12 @@
 <% provide(:title, 'Home')%>
-<h1>Gemini</h1>
-<p>
-  This is the home page for the Gemini project. <br/><br/>
-  Click this <%= link_to "link", users_path %> to view and modify users. <br/>	
-</p>
+<div class="center hero-unit">
+<h1>Welcome to the Gemini Project!</h1>
+<h2>
+<br/>Gemini is a new service for lawyers in Washington State. Sign-up now to receive updates.<br/><br/>
+</h2>
+<form>
+Email Address: <input type="text" name="firstname" style="width:260px; "/><br />
+WA State Bar Number: <input type="password" name="lastname" /><br/>
+<input type="submit" value="Submit" />
+</form>
+</div>
