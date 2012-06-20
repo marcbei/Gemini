@@ -3,6 +3,6 @@ class UserMailer < ActionMailer::Base
 
   def signup_email(user)
     @user = user 
-    mail(:to => "mbeitchman@gmail.com", :subject => "New Gemini Sign-Up")
+    mail(:to => "mbeitchman@gmail.com,fcarlson@gmail.com", :subject => "New Gemini Sign-Up")
   end
 end
