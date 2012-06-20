@@ -47,7 +47,7 @@ class UsersController < ApplicationController
         
         format.html { redirect_to root_path}
         format.json { render :json => @user, :status => :created, :location => @user }
-        flash[:success] = "Welcome to the Sample App!"
+        flash[:success] = "Thank you for signing up!"
       else
         format.html { redirect_to root_path, :notice => 'Please enter a valid email address and bar number' }
         format.json { render :json => @user.errors, :status => :unprocessable_entity }
