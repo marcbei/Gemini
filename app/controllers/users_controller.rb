@@ -45,7 +45,7 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         
-        UserMailer.signup_email(@user).deliver
+        #UserMailer.signup_email(@user).deliver
         format.html { redirect_to root_path}
         format.json { render :json => @user, :status => :created, :location => @user }
         flash[:success] = "Thank you for signing up!"
