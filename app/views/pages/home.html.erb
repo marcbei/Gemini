@@ -1,14 +1,12 @@
 <% provide(:title, 'Home')%>
-<div class="center hero-unit">
-<h1>Welcome to the Gemini Project!</h1>
-</div>
 <h2>
-<br/>Gemini is a new service for lawyers in Washington State. Sign-up now to receive updates.<br/><br/>
+<br/>Gemini is a web site where practicing lawyers can find, share and
+request model legal documents.<br/><br/>Provide your contact info to find out more.
 </h2>
 <div class="row">
   <div class="span6 offset3">
     <%= form_for(@user) do |f| %>
-	<%= render 'shared/error_messages' %>
+	    <%= render 'shared/error_messages' %>
       <%= f.label :email %>
       <%= f.text_field :email %>
 
