@@ -1,10 +1,13 @@
 class PagesController < ApplicationController
   
   def home
-  	@user = User.new
+  	@interested_user = InterestedUser.new
   end
 
   def about
+  end
+
+  def betahome
   end
 
 end

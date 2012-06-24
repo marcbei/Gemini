@@ -1,8 +1,9 @@
 Gemini::Application.routes.draw do
+  resources :interested_users
   resources :users
 
-  match '/users' => 'users#index'
   match '/about' => 'pages#about'
+  match '/beta' => 'pages#betahome'
 
 
   root :to => 'pages#home'

@@ -5,15 +5,17 @@ request model legal documents.<br/><br/>Provide your contact info to find out mo
 </h2>
 <div class="row">
   <div class="span6 offset3">
-    <%= form_for(@user) do |f| %>
+    <%= form_for(@interested_user) do |f| %>
 	    <%= render 'shared/error_messages' %>
-      <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.label :Name %>
+      <%= f.text_field :name %>
 
-      <%= f.label :"Washington State Bar Number" %>
-      <%= f.text_field :barnumber %>
+      <%= f.label :"Email" %>
+      <%= f.text_field :email %>
 
       <%= f.submit "Submit", :class=> "btn btn-large btn-primary" %>
     <% end %>
+    <%= link_to "Click to access the private beta.", beta_path %>
   </div>
 </div>
+<h3></h3>
