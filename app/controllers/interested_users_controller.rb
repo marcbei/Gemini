@@ -50,7 +50,7 @@ class InterestedUsersController < ApplicationController
         flash[:success] = "Thank you for signing up!"
 
       else
-        format.html { redirect_to root_path, :notice => 'Please enter a valid name and email' }
+        format.html { redirect_to root_path, :notice => 'Please enter a valid name (first and last) and email address.' }
         format.json { render :json => @interested_user.errors, :status => :unprocessable_entity }
       end
     end
