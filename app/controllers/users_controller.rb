@@ -42,18 +42,13 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
 
-    respond_to do |format|
       if @user.save
-        format.html { redirect_to root_path}
-        format.json { render :json => @user, :status => :created, :location => @user }
-        flash[:success] = "Thank you for signing up!"
-
+        redirect_to @user
+        flash[:success] = "Welcome to Gemini!"
       else
-        format.html { redirect_to root_path, :notice => 'Please enter a valid email address and bar number' }
-        format.json { render :json => @user.errors, :status => :unprocessable_entity }
+        render 'new'
       end
     end
-  end
 
   # PUT /users/1
   # PUT /users/1.json

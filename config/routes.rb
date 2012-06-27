@@ -4,6 +4,7 @@ Gemini::Application.routes.draw do
 
   match '/about' => 'pages#about'
   match '/beta' => 'pages#betahome'
+  match '/signup' => 'users#new'
 
 
   root :to => 'pages#home'
