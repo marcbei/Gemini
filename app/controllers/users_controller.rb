@@ -25,11 +25,6 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render :json => @user }
-    end
   end
 
   # GET /users/1/edit
@@ -40,9 +35,16 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
+
+    if params[:user][:confirmationcode] != "2015"
+      flash[:error] = "Unable to valid confirmation code. Please sign-up below to be eligable for the beta."
+      redirect_to root_path
+      return
+    end
+
     @user = User.new(params[:user])
 
-      if @user.save
+    if @user.save
         redirect_to @user
         flash[:success] = "Welcome to Gemini!"
       else

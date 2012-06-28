@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
-  attr_accessible :barnumber, :email, :name, :password, :password_confirmation, :accesscode
+  attr_accessor :confirmationcode
+  attr_accessible :barnumber, :email, :name, :password, :password_confirmation, :confirmationcode
+
   has_secure_password
   
   before_save { |user| user.email = email.downcase }
@@ -13,5 +15,6 @@ class User < ActiveRecord::Base
   validates :name, :presence=> true, :length=> { :maximum=> 50 }, :format=> { :with=> VALID_NAME_REGEX }
   validates :password, :presence=> true, :length=> { :minimum=> 6 }
   validates :password_confirmation, :presence=> true
+  validates :confirmationcode, :presence=>true, :length => {:minimum => 4, :maximum => 6}
 
 end

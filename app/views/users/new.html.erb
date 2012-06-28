@@ -11,8 +11,11 @@
       <%= f.label :email %>
       <%= f.text_field :email %>
 
+      <%= f.label :confirmationcode, "Access Code" %>
+      <%= f.password_field :confirmationcode %>
+
       <%= f.label :barnumber, "WA State Bar Number" %>
-      <%= f.text_field :barnumber %>
+      <%= f.password_field :barnumber %>
 
       <%= f.label :password %>
       <%= f.password_field :password %>
