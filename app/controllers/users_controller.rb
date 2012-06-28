@@ -37,7 +37,7 @@ class UsersController < ApplicationController
   def create
 
     if params[:user][:confirmationcode] != "2015"
-      flash[:error] = "Unable to valid confirmation code. Please sign-up below to be eligable for the beta."
+      flash[:error] = "We're unable to validate your confirmation code. Please sign-up below to be eligable for the beta."
       redirect_to root_path
       return
     end
