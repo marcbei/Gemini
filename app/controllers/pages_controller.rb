@@ -7,7 +7,4 @@ class PagesController < ApplicationController
   def about
   end
 
-  def betahome
-  end
-
 end

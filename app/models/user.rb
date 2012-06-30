@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_secure_password
   
   before_save { |user| user.email = email.downcase }
+  before_save :create_remember_token
   
   VALID_BAR_NUMBER_REGEX  = /^[-0-9]+$/
   validates :barnumber,  :presence=> true, :length=> { :maximum=> 50 }, :format=> { :with=> VALID_BAR_NUMBER_REGEX }
@@ -16,5 +17,11 @@ class User < ActiveRecord::Base
   validates :password, :presence=> true, :length=> { :minimum=> 6 }
   validates :password_confirmation, :presence=> true
   validates :confirmationcode, :presence=>true, :length => {:minimum => 4, :maximum => 6}
+
+
+private
+  def create_remember_token
+    self.remember_token = SecureRandom.urlsafe_base64
+  end
 
 end
