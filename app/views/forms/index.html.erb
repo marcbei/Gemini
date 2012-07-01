@@ -1,0 +1,12 @@
+<% provide(:title, 'Forms')%>
+<h1>All Forms</h1>
+
+<table>
+
+<% @forms.each do |f| %>
+  <tr>
+    <td><%= link_to File.basename(f.form.url), f %></td>
+  </tr>
+  <br/>
+<% end %>
+</table>

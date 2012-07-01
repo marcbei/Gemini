@@ -1,0 +1,9 @@
+<% provide(:title, 'Upload forms')%>
+<%= form_for @form, :html => {:multipart => true} do |f| %>
+  <div class="field">
+    <%= f.file_field :form %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Upload", :class=> "btn btn-large btn-primary"%>
+  </div>
+<% end %>

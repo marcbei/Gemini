@@ -1,10 +1,20 @@
 <header class="navbar navbar-fixed-top">
   <div class="navbar-inner">
     <div class="container">
+      <% if signed_in? %>
+        <%= link_to "Gemini", current_user, :id=> "logo" %>
+      <% else %>
       	<%= link_to "Gemini", root_path, :id=> "logo" %>
-	  	<nav>
+	  	<% end %>
+      <nav>
 	    	<ul class="nav pull-right">
           <% if signed_in? %>
+              <li>
+                <%= link_to "Find Forms", find_path%>
+              </li>
+              <li>
+                <%= link_to "Upload Forms", upload_path%>
+              </li>
               <li id="fat-menu" class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Account <b class="caret"></b>
