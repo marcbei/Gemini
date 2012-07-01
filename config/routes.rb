@@ -1,6 +1,6 @@
 Gemini::Application.routes.draw do
-  resources :interested_users
-  resources :users
+  resources :interested_users, :only => [:show, :new, :create]
+  resources :users, :only => [:show, :new, :create]
   resources :sessions, :only => [:new, :create, :destroy]
 
   match '/about' => 'pages#about'
