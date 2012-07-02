@@ -13,7 +13,7 @@ class FormsController < ApplicationController
   	if @form.save
 
 		flash[:success] = "Thank you for your contribution!"
-  		redirect_to current_user
+  		redirect_to find_path
   	else
   		flash.now[:error] = "There was a problem with your submission. Please try again."
   		render 'new'
