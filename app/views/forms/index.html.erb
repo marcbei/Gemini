@@ -1,8 +1,15 @@
 <% provide(:title, 'Forms')%>
-<h1>All Forms</h1>
+
+<div class = "row">
+	<div class="span6">
+		<%= form_tag forms_path, :method => 'get' do %>
+			<%= text_field_tag :search, params[:search] %>
+  			<%= submit_tag "Search", :name => nil, :class=> "btn btn-large btn-primary" %>
+  		<% end %>
+	</div>
+</div>
 
 <table>
-
 <% @forms.each do |f| %>
   <tr>
     <td><%= link_to File.basename(f.form.url), f %></td>
