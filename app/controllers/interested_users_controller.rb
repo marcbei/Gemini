@@ -44,7 +44,10 @@ class InterestedUsersController < ApplicationController
 
     respond_to do |format|
       if @interested_user.save
+        
         UserMailer.signup_email(@interested_user).deliver
+        UserMailer.signup_user_email(@interested_user).deliver
+
         format.html { redirect_to root_path}
         format.json { render :json => @interested_user, :status => :created, :location => @interested_user }
         flash[:success] = "Thank you for signing up!"
