@@ -1,21 +1,77 @@
 <% provide(:title, 'Home')%>
-<h2>Stay Tuned</h2>
-<!--<h2>
-<br/>Gemini is a web site where practicing lawyers can find, share and
-request model legal documents.<br/><br/>Provide your name and email to get the latest updates and participate in the private beta.
-</h2>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="row">
-  <div class="span6 offset3">
-    <%#= form_for(@interested_user) do |f| %>
-      <%#= f.label :Name %>
-      <%#= f.text_field :name %>
+<%= image_tag "logo.gif", :class => "logolofi" %>
+</div>
 
-      <%#= f.label :"Email" %>
-      <%#= f.text_field :email %>
+<br/><br/>
 
-      <%#= f.submit "Submit", :class=> "btn btn-large btn-primary" %>
-    <%# end %>
-    <%#= link_to "Have an access code for the private beta? Create your account.", signup_path %>
+<div class = "container">
+
+<div class="row">
+<div class="span1 offset1">
+<div> <iframe src="http://www.slideshare.net/slideshow/embed_code/89369" width="595" height="497" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0" allowfullscreen></iframe> </div>
+</div>
+<br/><br/><br/>
+<div class="span1 offset7">
+<div class="fb-like" data-href="https://www.facebook.com/Vizibid" data-send="false" data-layout="button_count" data-width="0" data-show-faces="true" data-font="arial"></div></div>
+
+<br/><br/><br/>
+<div class="span1 offset7">
+<a href="https://twitter.com/Vizibid" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @Vizibid</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+
+<br/><br/><br/>
+<div class="span1 offset7">
+<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+<script type="IN/FollowCompany" data-id="1035" data-counter="none"></script>
+</div>
+</div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="row">
+    <div class="span4">
+<h2><br/><br/>Please provide your name and email to request an invite to the private beta.</h2>
+</div>
+
+  <div class="span4">
+    <%= form_for(@interested_user) do |f| %>
+      <%= f.label :Name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :"Email" %>
+      <%= f.text_field :email %>
+
+      <%= f.submit "Submit", :class=> "btn btn-large btn-primary" %>
+    <% end %>
   </div>
 </div>
-<h3></h3>-->
+
+
+
+<br/><br/>
+<div class="row">
+      <div class="span4">
+ <h6> <%= link_to "Take a Quick Survey", '#' %> </h6>
+  </div>
+</div>
+<br/>
+<div class="row">
+        <div class="span10">
+ <h6> Comments or Questions: <%= mail_to "info@vizibid.com"%></h6>
+</div>
+</div>
