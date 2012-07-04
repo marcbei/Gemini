@@ -1,16 +1,16 @@
 Gemini::Application.routes.draw do
   resources :interested_users, :only => [:show, :new, :create]
-  resources :users, :only => [:show, :new, :create]
-  resources :sessions, :only => [:new, :create, :destroy]
-  resources :forms
+  #resources :users, :only => [:show, :new, :create]
+  #resources :sessions, :only => [:new, :create, :destroy]
+  #resources :forms
 
-  match '/about' => 'pages#about'
-  match '/beta' => 'pages#betahome'
+  #match '/about' => 'pages#about'
+  #match '/beta' => 'pages#betahome'
   match '/signup' => 'users#new'
-  match '/signin' => 'sessions#new'
-  match '/signout' => 'sessions#destroy', :via => :delete
-  match '/upload' => 'forms#new'
-  match '/find' => 'forms#index'
+  #match '/signin' => 'sessions#new'
+  #match '/signout' => 'sessions#destroy', :via => :delete
+  #match '/upload' => 'forms#new'
+  #match '/find' => 'forms#index'
 
 
   root :to => 'pages#home'
