@@ -62,7 +62,7 @@
       <%= f.label :"Email" %>
       <%= f.text_field :email %>
 
-      <%= f.submit "Submit", :class=> "btn btn-large btn-primary" %>
+      <%= f.submit "Submit", :class=> "btn btn-large btn-primary", :onclick=> "_gaq.push(['_trackEvent', 'Sign-Up', 'InterestedUsers']);" %>
     <% end %>
   </div>
 </div>
