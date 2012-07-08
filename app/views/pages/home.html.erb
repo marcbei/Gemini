@@ -11,7 +11,7 @@
 
 <div class="row" >
 <div class="span3">
-<%= image_tag "logo.gif" %>
+<%= link_to image_tag("logo.gif"), root_path%>
 </div></div>
 
 <div class = "container">
@@ -37,7 +37,7 @@
 
 <br/><br/><br/>
 <div class="span3 offset5">
- <a href="#" style="color:GRAY;">Take a Quick Survey</a> 
+  <%= link_to "Take our Survey", survey_path, :style => "color:GRAY;" %>
 </div>
 
 <br/><br/>
@@ -66,3 +66,4 @@
     <% end %>
   </div>
 </div>
+
