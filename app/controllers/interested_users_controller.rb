@@ -42,6 +42,8 @@ class InterestedUsersController < ApplicationController
   def create
      @interested_user = InterestedUser.new(params[:interested_user])
 
+     #@interested_user['referer'] = request.referer
+
     respond_to do |format|
       if @interested_user.save
 
