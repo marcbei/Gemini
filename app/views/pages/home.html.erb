@@ -9,6 +9,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
+
 <div class="row" >
 <div class="span3">
 <%= link_to image_tag("logo.gif"), root_path%>
@@ -66,6 +67,5 @@
     <% end %>
   </div>
 </div>
-
-
-<% request.env['HTTP_REFERER'] %>
+Hello
+<%= request.referer %>
