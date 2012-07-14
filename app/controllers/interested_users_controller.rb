@@ -40,12 +40,10 @@ class InterestedUsersController < ApplicationController
   # POST /interested_users
   # POST /interested_users.json
   def create
-    @interested_user = InterestedUser.new(params[:interested_user])
+     @interested_user = InterestedUser.new(params[:interested_user])
 
     respond_to do |format|
       if @interested_user.save
-        
-        @interested_user['referer'] = request.referer
 
         UserMailer.signup_email(@interested_user).deliver
         UserMailer.signup_user_email(@interested_user).deliver
