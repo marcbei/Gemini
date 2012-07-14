@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120701071842) do
+ActiveRecord::Schema.define(:version => 20120714011830) do
 
   create_table "forms", :force => true do |t|
     t.string   "form"
@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20120701071842) do
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "referer"
   end
 
   add_index "interested_users", ["email"], :name => "index_interested_users_on_email", :unique => true

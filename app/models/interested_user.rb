@@ -1,5 +1,5 @@
 class InterestedUser < ActiveRecord::Base
-  attr_accessible :email, :name
+  attr_accessible :email, :name, :referer
 
   before_save { |user| user.email = email.downcase }
 
@@ -8,4 +8,6 @@ class InterestedUser < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, :presence=> true, :format=> { :with=> VALID_EMAIL_REGEX },
                     :uniqueness=> true
+
+  validates :referer, :presence => true
 end

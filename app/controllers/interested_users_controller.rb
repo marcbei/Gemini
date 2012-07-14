@@ -45,6 +45,8 @@ class InterestedUsersController < ApplicationController
     respond_to do |format|
       if @interested_user.save
         
+        @interested_user['referer'] = request.referer
+
         UserMailer.signup_email(@interested_user).deliver
         UserMailer.signup_user_email(@interested_user).deliver
 
