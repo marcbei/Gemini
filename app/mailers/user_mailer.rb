@@ -1,5 +1,5 @@
 class UserMailer < ActionMailer::Base
-  default :from => "info@vizibid.com"
+  default :from => "\"The Vizibid Team\" <info@vizibid.com>"
 
   def signup_email(user)
     @interested_user = user 
