@@ -1,5 +1,5 @@
 class InterestedUser < ActiveRecord::Base
-  attr_accessible :email, :name, :referer
+  attr_accessible :email, :name
 
   before_save { |user| user.email = email.downcase }
 
@@ -8,5 +8,4 @@ class InterestedUser < ActiveRecord::Base
   validates :email, :presence=> true, :format=> { :with=> VALID_EMAIL_REGEX },
                     :uniqueness=> true
 
- # validates :referer, :presence => true
 end
