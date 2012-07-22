@@ -2,6 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@font-face {
+    font-family: 'NewAthenaUnicodeRegular';
+    src: url('/assets/new_athena_unicode-webfont.eot');
+    src: url('/assets/new_athena_unicode-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/new_athena_unicode-webfont.woff') format('woff'),
+         url('/assets/new_athena_unicode-webfont.ttf') format('truetype'),
+         url('/assets/new_athena_unicode-webfont.svg#NewAthenaUnicodeRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 #surveylink {
 	color: #0070c0; 
 	font-size: 20px; 
@@ -11,9 +23,40 @@
         color: #fff;
     	background-color: #C0C0C0; } }
 
-#infolink {
+.infolink {
 	color: gray; 
 	
 	&:hover {
         color: #fff;
-    	background-color: #C0C0C0; } }
+        background-color: #C0C0C0; } }
+
+.faqlink {
+    color: gray; 
+    text-decoration: underline;
+    
+    &:hover {
+        color: #fff;
+        background-color: #C0C0C0; } }
+
+.nlist
+{
+    position: absolute;
+    top: 99px;
+    right: 20px;
+}
+
+.nlist li
+{
+    display: inline;
+    list-style-type: none;
+    padding-right: 30px;
+}
+
+.nlist li a
+{
+    color: #000000;
+
+    &:hover {
+        color: #fff;
+        background-color: #C0C0C0; }
+}

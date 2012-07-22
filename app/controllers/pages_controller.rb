@@ -10,4 +10,7 @@ class PagesController < ApplicationController
   def survey
   end
 
+  def faq
+  end
+
 end

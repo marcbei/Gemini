@@ -9,14 +9,6 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-
-<div class="row" >
-<div class="span2">
-<%= link_to image_tag("logo2.bmp"), root_path%>
-</div></div>
-<br/>
-
-
 <div class = "container">
 <div class="row">
 <div class="span1">
@@ -39,12 +31,12 @@
 
 <br/><br/><br/><br/><br/><br/>
 <div class="span3 offset6">
-  <%= link_to "Complete our Survey", survey_path, :id => "surveylink", :target => "_blank" %>
+  <%= link_to "Complete our Survey", survey_path, :id => "surveylink"%>
 </div>
 
 <br/><br/><br/><br/><br/><br/>
 <div class="span3 offset6" style="color:BlACK;">
- Comments or Questions:<br/><a href="mailto:info@vizibid.com" id = "infolink">info@vizibid.com</a>
+ Comments or Questions:<br/><a href="mailto:info@vizibid.com" class = "infolink">info@vizibid.com</a>
 </div>
 </div>
 </div>
@@ -57,13 +49,13 @@
       <%= f.label :Name %>
       <%= f.text_field :name %>
 
-      <%= f.label :"Email" %>
+      <%= f.label :"E-mail" %>
       <%= f.text_field :email %>
 
       <%= f.submit "Submit", :class=> "btn btn-large btn-primary", :onclick=> "_gaq.push(['_trackEvent', 'Sign-Up', 'InterestedUsers']);" %>
     <% end %>
   </div>
     <div class="span4">
-<h2><br/><br/>Sign-up to receive updates and to get an invitation to join the beta release.</h2>
+<h2><br/><br/>Sign up to receive updates and to get an invitation to join the initial release.</h2>
 </div>
 </div>

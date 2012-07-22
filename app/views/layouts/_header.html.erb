@@ -1,40 +1,23 @@
-<header class="navbar navbar-fixed-top">
-
-  <div class="navbar-inner">
+<header class="navbar" style="border-bottom:1px solid black;">
 
   <div class="container">
-   <%= link_to "Visibid", root_path, :id=> "logo" %>
-     <!--    <%# if signed_in? %>
-        <%#= link_to "Gemini", find_path, :id=> "logo" %>
-      <%# else %>
-      	<%#= link_to "Gemini", root_path, :id=> "logo" %>
-	  	<%# end %>
+   <%= link_to image_tag("logo2.bmp"), root_path%>
+
+      <div class="offset2" style="font-family: NewAthenaUnicodeRegular; color: gray; font-style: italic; font-size: 120%">
+      the legal forms sharing site for lawyers
+      </div>
       <nav>
-	    	<ul class="nav pull-right">
-          <%# if signed_in? %>
-              <li>
-                <%#= link_to "Find Forms", find_path%>
-              <li>
-              <li>
-                <%#= link_to "Upload Forms", upload_path%>
+	    	<ul class = "nlist">
+              <li >
+                <%= link_to "Home", root_path %>
               </li>
-                li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%#= link_to "Profile", current_user %></li>
-                <li><%#= link_to "Settings", '#' %></li>
-                <li class="divider"></li>
-                <li>
-                  <%#= link_to "Sign out", signout_path, :method => "delete" %>
-                </li>
-              </ul>
-            <%# else %>
-            <li><%#= link_to "Sign in", signin_path %></li>  
-            <#% end %>
+              <li>
+                <%= link_to "FAQ", faq_path %>
+              </li>
+              <li>
+                <%= link_to "About", about_path %>
+              </li>
 	        </ul>
 	  	</nav>
-    </div>-->
-  </div>
+    </div>
 </header>

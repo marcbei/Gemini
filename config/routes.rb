@@ -6,7 +6,8 @@ Gemini::Application.routes.draw do
   #resources :sessions, :only => [:new, :create, :destroy]
   #resources :forms
 
-  #match '/about' => 'pages#about'
+  match '/about' => 'pages#about'
+  match '/faq' => 'pages#faq'
   #match '/beta' => 'pages#betahome'
   match '/signup' => 'users#new'
   match '/survey' => "pages#survey"
