@@ -1,0 +1,16 @@
+<% provide(:title, 'Investor')%>
+
+<% if @approved %>
+	<br/>
+	<H3>Click the links below to download our pitch deck and executive summary.</H3><br/>
+	<%= link_to "Pitch Deck", investor_deck_path %> <br/>
+	<%= link_to "Executive Summary", investor_summary_path%>
+<% else %>
+	<div class="row">
+ 	<%= form_tag investor_path, :style => "margin-top: 50px; width: 400px;" do %>
+ 		<H3 style="width: 700px;">Enter the password to access the investor documents.</H3> <br/>
+		<%= password_field_tag :password%>
+		<%= submit_tag "Submit", :class => "btn btn-info" %>
+	<% end %>
+</div>
+<% end %>

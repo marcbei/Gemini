@@ -1,16 +1,19 @@
 Gemini::Application.routes.draw do
-  get "pages/survey"
+  #get "pages/survey"
 
-  resources :interested_users, :only => [:show, :new, :create]
+  #resources :interested_users, :only => [:show, :new, :create]
   #resources :users, :only => [:show, :new, :create]
   #resources :sessions, :only => [:new, :create, :destroy]
   #resources :forms
 
-  match '/about' => 'pages#about'
-  match '/faq' => 'pages#faq'
+  match '/investor' => 'pages#investor'
+  match '/investor/deck' => 'pages#deck'
+  match '/investor/summary' => 'pages#summary'
+  #match '/about' => 'pages#about'
+  #match '/faq' => 'pages#faq'
   #match '/beta' => 'pages#betahome'
-  match '/signup' => 'users#new'
-  match '/survey' => "pages#survey"
+  #match '/signup' => 'users#new'
+  #match '/survey' => "pages#survey"
   #match '/signin' => 'sessions#new'
   #match '/signout' => 'sessions#destroy', :via => :delete
   #match '/upload' => 'forms#new'
