@@ -3,8 +3,8 @@
 <% if @approved %>
 	<br/>
 	<H3>Click the links below to download our executive summary and pitch deck.</H3><br/>
-	<%= link_to "Executive Summary", investor_summary_path%>
-	<%= link_to "Pitch Deck", investor_deck_path %> <br/>
+	<%= link_to "Executive Summary", investor_summary_path%> <br/>
+	<%= link_to "Pitch Deck", investor_deck_path %> 
 <% else %>
 	<div class="row">
  	<%= form_tag investor_path, :style => "margin-top: 50px; width: 400px;" do %>
