@@ -48,15 +48,14 @@ class InterestedUsersController < ApplicationController
       if @interested_user.save
 
         UserMailer.signup_email(@interested_user).deliver
-        UserMailer.signup_user_email(@interested_user).deliver
+        #UserMailer.signup_user_email(@interested_user).deliver
 
-        format.html { redirect_to root_path}
-        format.json { render :json => @interested_user, :status => :created, :location => @interested_user }
+        format.html { redirect_to beta_path}
         flash[:success] = "Thank you for signing up!"
 
       else
-        format.html { redirect_to root_path, :notice => 'Please enter a valid name and email address.' }
-        format.json { render :json => @interested_user.errors, :status => :unprocessable_entity }
+        format.html { redirect_to beta_path}
+        flash[:error] = "Please enter a valid name and email address."
       end
     end
   end

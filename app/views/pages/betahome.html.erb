@@ -1,4 +1,23 @@
-<% provide(:title, 'Beta')%>
-<h1>The beta!</h1>
-<li><%= link_to "Sign In", '#' %></li>
-<li><%= link_to "Create Account", signup_path %></li>
+<% provide(:title, 'home')%>
+
+<div class = "container">
+  <div class="row">
+		<span><a href="mailto:info@vizibid.com"><img src="/assets/vizibid-RGB.jpg" style="width: 312px; height: 104px; margin-left: auto; margin-right: auto;"/></a></span><br/>
+    	 <a href="mailto:info@vizibid.com" style="color:black;">Contact Us</a><br/>
+    	 <a href="<%=investor_path%>" style = "color: black;">Investor Portal </a> 
+  </div>
+  <div class = "row">
+
+  	<div class = "span7 offset2" style="font-size: 15px; line-height:  22px;">
+  		Vizibid is revolutionizing the way lawyers find and prepare their legal documents. Vizibid is a website that enables lawyers to find, request, and share model legal documents with other lawyers. Vizibid also enables lawyers to rate documents, write shared comments about the documents, and share revised versions of the documents.
+  		<br/><br/>
+  		Be the first to find out about updates.
+  		<br/><br/>
+  		 <%= form_for(@interested_user) do |f| %>
+		      <%= f.text_field :email, :placeholder => "email", :style => "width: 250px; height: 30px;"%>
+
+      		  <%= f.submit "Submit", :class=> "btn btn-info"%>
+    	<% end %>
+  	</div>
+  </div>
+</div>

@@ -1,7 +1,7 @@
 Gemini::Application.routes.draw do
   #get "pages/survey"
 
-  #resources :interested_users, :only => [:show, :new, :create]
+  resources :interested_users, :only => [:show, :new, :create]
   #resources :users, :only => [:show, :new, :create]
   #resources :sessions, :only => [:new, :create, :destroy]
   #resources :forms
@@ -11,7 +11,7 @@ Gemini::Application.routes.draw do
   match '/investor/summary' => 'pages#summary'
   #match '/about' => 'pages#about'
   #match '/faq' => 'pages#faq'
-  #match '/beta' => 'pages#betahome'
+  match '/beta' => 'pages#betahome'
   #match '/signup' => 'users#new'
   #match '/survey' => "pages#survey"
   #match '/signin' => 'sessions#new'

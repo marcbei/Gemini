@@ -4,7 +4,8 @@ class PagesController < ApplicationController
   	@interested_user = InterestedUser.new 
   end
 
-  def about
+  def betahome
+    @interested_user = InterestedUser.new 
   end
 
   def survey
