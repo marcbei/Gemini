@@ -1,23 +1,24 @@
-<% provide(:title, 'home')%>
+<% provide(:title, 'Home')%>
 
-<div class = "container">
-  <div class="row">
-		<span><a href="mailto:info@vizibid.com"><img src="/assets/vizibid-RGB.jpg" style="width: 312px; height: 104px; margin-left: auto; margin-right: auto;"/></a></span><br/>
-    	 <a href="mailto:info@vizibid.com" style="color:black;">Contact Us</a><br/>
-    	 <a href="<%=investor_path%>" style = "color: black;">Investor Portal </a> 
-  </div>
-  <div class = "row">
+<div class="row">
+	<span class="offset4"><a href="mailto:info@vizibid.com"><img src="/assets/vizibid-RGB.jpg" style="width: 312px; height: 104px; margin-top: 50px;"/></a></span><br/><br/>
+</div>
+<div class = "row">
 
-  	<div class = "span7 offset2" style="font-size: 15px; line-height:  22px;">
-  		Vizibid is revolutionizing the way lawyers find and prepare their legal documents. Vizibid is a website that enables lawyers to find, request, and share model legal documents with other lawyers. Vizibid also enables lawyers to rate documents, write shared comments about the documents, and share revised versions of the documents.
-  		<br/><br/>
-  		Be the first to find out about updates.
+	<div class = "span7 offset3" style="font-size: 15px; line-height:  22px;">
+		Vizibid is revolutionizing the way lawyers find and prepare their legal documents. Vizibid is a website that enables lawyers to find, request, and share model legal documents with other lawyers. Vizibid also enables lawyers to rate documents, write shared comments about the documents, and share revised versions of the documents.
+		<br/><br/><br/>
+    <div class = "well span5" style="margin-left: 40px;">
+  		Be the first to get updates.
   		<br/><br/>
   		 <%= form_for(@interested_user) do |f| %>
-		      <%= f.text_field :email, :placeholder => "email", :style => "width: 250px; height: 30px;"%>
+		      <%= f.text_field :name, :placeholder => "Name", :style => "height: 30px;"%><br/>
+          <%= f.text_field :email, :placeholder => "Email", :style => "height: 30px;"%><br/>
+          <%= f.label "State Licensed", :class => "pull-left" %>
+          <%= f.select :state_licensed, options_for_select(options_for_state_licensed) %><br/>
 
-      		  <%= f.submit "Submit", :class=> "btn btn-info"%>
+    		  <%= f.submit "Submit", :class=> "btn btn-info"%>
     	<% end %>
-  	</div>
-  </div>
+    </div>
+	</div>
 </div>

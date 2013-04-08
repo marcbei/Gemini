@@ -1,5 +1,5 @@
 class InterestedUser < ActiveRecord::Base
-  attr_accessible :email, :name
+  attr_accessible :email, :name, :state_licensed
 
   before_save { |user| user.email = email.downcase }
 

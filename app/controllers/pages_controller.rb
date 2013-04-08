@@ -5,6 +5,7 @@ class PagesController < ApplicationController
   end
 
   def betahome
+    @home = true
     @interested_user = InterestedUser.new 
   end
 
