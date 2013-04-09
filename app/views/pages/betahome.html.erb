@@ -6,15 +6,24 @@
 <div class = "row">
 
 	<div class = "span7 offset3" style="font-size: 15px; line-height:  22px;">
-		Vizibid is revolutionizing the way lawyers find and prepare their legal documents. Vizibid is a website that enables lawyers to find, request, and share model legal documents with other lawyers. Vizibid also enables lawyers to rate documents, write shared comments about the documents, and share revised versions of the documents.
-		<br/><br/><br/>
+		Vizibid helps busy lawyers find the exact model legal documents they need. Here's how:
+    <br/><br/>
+    <ul>
+      <li class="splashli"><strong>Search.</strong>&nbsp;Search through Vizibid's ever-growing database of model legal documents for the exact document you need. Download whatever you need.</li>
+      <li class="splashli"><strong>Request.</strong>&nbsp;Can't find what you want? Make a request. Other lawyers in the Vizibid community will upload documents in response to your requests.</li>
+      <li class="splashli"><strong>Share.</strong>&nbsp;Sometimes other lawyers will request a document you already have. Share your document.</li>
+      <li class="splashli"><strong>Review.</strong>&nbsp;Read and write comments about documents. See what other lawyers have to say. Learn the nuances of each document you find.</li>
+      <li class="splashli"><strong>Ratings.</strong>&nbsp;Every Vizibid document is provided by a lawyers. All the comments and ratings are from lawyers. You can trust what you see.</li>
+      <li class="splashli"><strong>Subscription.</strong>&nbsp;Download freely. Your subscription will include as many downloads as you need. No more paying for documents sight-unseen.</li>
+    </ul>
+		<br/>
     <div class = "well span5" style="margin-left: 40px;">
-  		Be the first to get updates.
+  		Vizibid is launching soon. Tell us how to reach you, and we'll let you know when Vizibid launches in your area.
   		<br/><br/>
   		 <%= form_for(@interested_user) do |f| %>
 		      <%= f.text_field :name, :placeholder => "Name" %><br/>
           <%= f.text_field :email, :placeholder => "Email" %><br/>
-          <%= f.label "State Licensed", :class => "pull-left" %>
+          <%= f.label "Where do you practice law?", :class => "pull-left" %>
           <%= f.select :state_licensed, options_for_select(options_for_state_licensed) %><br/>
 
     		  <%= f.submit "Submit", :class=> "btn btn-info"%>
