@@ -12,8 +12,8 @@
   		Be the first to get updates.
   		<br/><br/>
   		 <%= form_for(@interested_user) do |f| %>
-		      <%= f.text_field :name, :placeholder => "Name", :style => "height: 30px;"%><br/>
-          <%= f.text_field :email, :placeholder => "Email", :style => "height: 30px;"%><br/>
+		      <%= f.text_field :name, :placeholder => "Name" %><br/>
+          <%= f.text_field :email, :placeholder => "Email" %><br/>
           <%= f.label "State Licensed", :class => "pull-left" %>
           <%= f.select :state_licensed, options_for_select(options_for_state_licensed) %><br/>
 

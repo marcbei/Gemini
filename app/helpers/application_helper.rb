@@ -1,6 +1,7 @@
 module ApplicationHelper
 	    def options_for_state_licensed
     [
+        ['---', '---'],
         ['Alabama', 'Alabama'],
         ['Alaska', 'Alaska'],
         ['Arizona', 'Arizona'],
