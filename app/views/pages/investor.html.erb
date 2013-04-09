@@ -1,14 +1,15 @@
 <% provide(:title, 'Investor')%>
 
+<div class="offset3"><a href="/"><img src="/assets/vizibid-RGB.jpg" style="width: 312px; height: 104px;"/></a></div>
+
 <% if @approved %>
-	<div class="offset3"><a href="/"><img src="/assets/vizibid-RGB.jpg" style="width: 312px; height: 104px;"/></a><br/><br/></div>
-	<H3>Click the links below to download our executive summary and investor presentation.</H3><br/>
+	<H3 style = "margin-top: 20px;">Click the links below to download our executive summary and investor presentation.</H3><br/>
 	<div><%= link_to "Executive Summary", investor_summary_path, :style => "font-size: 15px;"%></div>
 	<div style="margin-top: 5px;"><%= link_to "Investor Presentation", investor_deck_path, :style => "font-size: 15px;" %></div>
 <% else %>
-	<div class="row">
- 	<%= form_tag investor_path, :style => "margin-top: 50px; width: 400px;" do %>
- 		<H3 style="width: 700px;">Enter the password to access the investor documents.</H3> <br/>
+	<div class="row offset2">
+ 	<%= form_tag investor_path, :style => "margin-top: 20px; width: 400px;" do %>
+ 		<H3 style="width: 700px;">Enter the password to access the investor portal.</H3> <br/>
 		<%= password_field_tag :password%>
 		<%= submit_tag "Submit", :class => "btn btn-info" %>
 	<% end %>
