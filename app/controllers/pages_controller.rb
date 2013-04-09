@@ -2,11 +2,10 @@ class PagesController < ApplicationController
   
   def home
   	@interested_user = InterestedUser.new 
+    @home = true
   end
 
   def betahome
-    @home = true
-    @interested_user = InterestedUser.new 
   end
 
   def survey
