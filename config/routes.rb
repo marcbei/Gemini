@@ -1,7 +1,7 @@
 Gemini::Application.routes.draw do
   #get "pages/survey"
 
-  resources :interested_users, :only => [:show, :new, :create]
+  resources :interested_users, :only => [:create]
   #resources :users, :only => [:show, :new, :create]
   #resources :sessions, :only => [:new, :create, :destroy]
   #resources :forms
