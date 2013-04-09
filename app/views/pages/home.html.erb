@@ -22,8 +22,10 @@
   		Vizibid is launching soon. Tell us how to reach you, and we'll let you know when Vizibid launches in your area.
   		<br/><br/>
   		 <%= form_for(@interested_user) do |f| %>
-	      	<%= f.text_field :name, :placeholder => "Name" %><br/>
-          	<%= f.text_field :email, :placeholder => "Email" %><br/>
+	      	  <%= f.label "Name", :class => "pull-left" %>
+            <%= f.text_field :name %><br/>
+            <%= f.label "Email", :class => "pull-left" %>
+          	<%= f.text_field :email %><br/>
           	<%= f.label "Where do you practice law?", :class => "pull-left" %>
           	<%= f.select :state_licensed, options_for_select(options_for_state_licensed) %><br/>
 		  	<%= f.submit "Submit", :class=> "btn btn-info"%>
