@@ -48,7 +48,7 @@ class InterestedUsersController < ApplicationController
       if @interested_user.save
 
         UserMailer.signup_email(@interested_user).deliver
-        #UserMailer.signup_user_email(@interested_user).deliver
+        UserMailer.signup_user_email(@interested_user).deliver
 
         format.html { redirect_to root_path}
         flash[:success] = "Thank you for signing up!"

@@ -8,7 +8,7 @@ class UserMailer < ActionMailer::Base
 
   def signup_user_email(user)
 	@interested_user = user 
-    mail(:to => user.email, :subject => "Thank You For Signing Up")
+    mail(:to => user.email, :subject => "Vizibid Interest Confirmation")
   end 
 
 end
