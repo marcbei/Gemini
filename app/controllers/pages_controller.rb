@@ -14,6 +14,9 @@ class PagesController < ApplicationController
   def faq
   end
 
+  def demo
+  end
+
   def investor
   	if params[:password] == "tajarin509"
   		@approved = true
@@ -24,14 +27,14 @@ class PagesController < ApplicationController
 
   def deck
 
-	open(Rails.root.join('app','assets','docs','Vizibid_Investor_Presentation.pptx')) {|form|
-	      tmpfile = Tempfile.new("temp")
-	      File.open(tmpfile.path, 'wb') do |f| 
-	        f.write form.read
-	      end 
-	      send_file tmpfile.path, :filename =>  'Vizibid_Investor_Presentation.pptx'
-	    }
-  end
+  	open(Rails.root.join('app','assets','docs','Vizibid_Investor_Presentation.pptx')) {|form|
+  	      tmpfile = Tempfile.new("temp")
+  	      File.open(tmpfile.path, 'wb') do |f| 
+  	        f.write form.read
+  	      end 
+  	      send_file tmpfile.path, :filename =>  'Vizibid_Investor_Presentation.pptx'
+  	    }
+    end
 
   def summary
   	open(Rails.root.join('app','assets','docs','Vizibid_Executive_Summary.pdf')) {|form|

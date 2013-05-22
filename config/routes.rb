@@ -7,6 +7,7 @@ Gemini::Application.routes.draw do
   #resources :forms
 
   match '/investor' => 'pages#investor'
+  match '/investor/demo' => 'pages#demo'
   match '/investor/deck' => 'pages#deck'
   match '/investor/summary' => 'pages#summary'
   #match '/about' => 'pages#about'
