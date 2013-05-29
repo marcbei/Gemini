@@ -18,7 +18,7 @@ class PagesController < ApplicationController
   end
 
   def investor
-  	if params[:password] == "tajarin509"
+  	if params[:password] == "cavatelli429"
   		@approved = true
   	else
   		@approved = false
